@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+}
+.banner{
+    background-color: #262A2F;
+    height:100vh;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content{
+    margin-left: 100px;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: white;
+    width: 60%;
+    border-radius: 30px;
+}
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+button{
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+
+table {
+    color: black;
+    text-align: center;
+    background-color: #fff;
+    border-collapse: collapse; /* เพื่อให้เส้นขอบของตารางเรียบเรียง */
+    width: 100%; /* ปรับขนาดของตารางให้เต็มพื้นที่ */
+    border: 2px solid #ddd; /* เพิ่มเส้นขอบของตาราง */
+}
+
+table th {
+    padding: 15px; /* ปรับขนาดของช่องแบบหัว */
+    background-color: #f2f2f2; /* เปลี่ยนสีพื้นหลังของช่องแบบหัว */
+    border: 1px solid #ddd; /* เพิ่มเส้นขอบของช่องแบบหัว */
+}
+
+table td {
+    padding: 12px; /* ปรับขนาดของช่องข้อมูล */
+    border: 1px solid #ddd; /* เพิ่มเส้นขอบของช่องข้อมูล */
+}
+
+/* เพิ่มสไตล์สำหรับแถวที่เป็นคู่ */
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* เปลี่ยนสีพื้นหลังของแถวที่เป็นคู่ */
+}
+
+.bill{
+    background-color: WHITE;
+    padding: 50px;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: left;
+    border-radius: 30px;
+}
+
+
+.banner1{
+    background-color: #262A2F;
+    height:100vh;
+
+    text-align: left;
+
+}
+
+.navbar1{
+    width: 85%;
+    margin: auto;
+
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+}
+.navbar1 ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar1 ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar1 ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar1 ul li:hover::after{
+    width: 100%;
+}
+
+.billbox{
+    background-color: white;
+    height: 100%;
+    font-size: 30px;
+
+    padding-left: 100px;
+    padding-top: 30px;
+}
+
+.backward-button {
+    background-color: #7a7a7a; /* สีพื้นหลัง */
+    border: none;
+    color: white; /* สีข้อความ */
+    padding: 5px 10px; /* ขนาดของปุ่ม */
+    text-align: center;
+    text-decoration: none;
+    width: 5%;
+    font-size: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 8px; /* ความโค้งของขอบปุ่ม */
+    transition-duration: 0.4s;
+    margin-left: 0px;
+  }
+  
+  .backward-button:hover {
+    background-color: #ff4a4a; /* เปลี่ยนสีพื้นหลังเมื่อเม้าส์ไปชี้ */
+  }
+  .banners{
+    background-color: #262A2F;
+    height:100vh;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+.buttonsee{
+    background-color: rgb(177, 0, 0);
+    border: white;
+}
+.buttonsee1{
+    background-color: green;
+    border: white;
+}
+.contenttem{
+    margin-left: 100px;
+    margin-top: 40px;
+    padding: 30px;
+    background-color: white;
+    width: 60%;
+    border-radius: 30px;
+    text-align: left;
+    font-size: 30px;
+   
+}
+.contenttem input{
+    font-size: 30px;
+}
+.buttclear{
+    all: unset;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #EFEFEF;
+    font-size: 12px;
+    padding: 1.5px;
+}
+.buttclear:hover{
+    all: unset;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: #c2c2c2;
+    font-size: 12px;
+    padding: 1.5px;
+}

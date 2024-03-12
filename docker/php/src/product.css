@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    min-height: 100vh;
+    background: transparent;
+    margin-top: -130px;
+}
+.box{
+    max-width: 90%;
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    border-radius: 5px;
+}
+.greenbutt > button{
+    background-color: #78B87B;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    border-color: transparent;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+.box h2{
+    margin-bottom: 10px;
+}
+input[type="text"]{
+    font-size: 20px;
+    width: 30%;
+}
+.upload-area-title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.uploadlabel{
+    width: 100%;
+    min-height: 100px;
+    background: #18a7ff0d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px dashed #18a7ff82;
+    cursor: pointer;
+}
+.uploadlabel span{
+    font-size: 70px;
+    color: #18a7ff;
+}
+.uploadlabel p{
+    font-size: 20px;
+    color: #18a7ff;
+    font-weight: 800;
+    font-family: cursive;
+}
+.uploaded{
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #a5a5a5;
+}
+.showfilebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px 15px;
+    box-shadow: #0000000d 0px 0px 0px 1px,
+    #d1d5db3d 0px 0px 0px 1px inset;
+}
+.showfilebox .left{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.filetype{
+    background: #18a7ff;
+    color: #fff;
+    padding: 5px 15px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+    border-radius: 3px;
+}
+.left h3{
+    font-weight: 600;
+    font-size: 18px;
+    color: #292f42;
+    margin: 0;
+}
+.right span{
+    background: #18a7ff;
+    color: #fff;
+    width: 15px;
+    height: 25px;
+    font-size: 25px;
+    line-height: 25px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.bannerP{
+    width: 100%;
+
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.symbol{
+    border: 1px solid rgb(196, 196, 196);
+    max-width: 30%;
+    border-radius: 10px;
+    padding-left: 20px;
+    display: inline-block;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+.symbol a{
+    color: #0078c2;
+    text-align: center;
+    
+    display: block;
+    margin-bottom: 20px;
+
+}
+.symbol p{
+    font-size: 15px;
+    margin-bottom: 2px;
+}
+
+
+
+.download-button {
+    background-color: #4CAF50; /* สีพื้นหลัง */
+    border: none;
+    color: white; /* สีข้อความ */
+    padding: 15px 20px; /* ขนาดของปุ่ม */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 10px; /* ความโค้งของขอบปุ่ม */
+    transition-duration: 0.4s;
+  }
+  
+  .download-button:hover {
+    background-color: #45a049; /* เปลี่ยนสีพื้นหลังเมื่อเม้าส์ไปชี้ */
+  }
+
+  .backward-button {
+    background-color: #7a7a7a; /* สีพื้นหลัง */
+    border: none;
+    color: white; /* สีข้อความ */
+    padding: 5px 10px; /* ขนาดของปุ่ม */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 8px; /* ความโค้งของขอบปุ่ม */
+    transition-duration: 0.4s;
+  }
+  
+  .backward-button:hover {
+    background-color: #ff4a4a; /* เปลี่ยนสีพื้นหลังเมื่อเม้าส์ไปชี้ */
+  }
+  
+  

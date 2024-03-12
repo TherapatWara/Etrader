@@ -1,0 +1,36 @@
+version: '3.3'
+
+services:
+  db:
+    container_name: dbreact
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ttt
+      MYSQL_DATABASE: MYSQL_DATABASE
+      MYSQL_USER: MYSQL_USER
+      MYSQL_PASSWORD: MYSQL_PASSWORD
+    ports:
+      - "9906:3306"
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+  php-apache-environment:
+    container_name: php-apache
+    build: 
+      context: ./fontend
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    volumes:
+      - ./php/src:/var/www/html/
+    ports:
+      - 8080:80
+      
+    
