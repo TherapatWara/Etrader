@@ -11,7 +11,7 @@ if (isset($_GET['user']) && isset($_GET['pass'])) {
     $stmt->execute();
 
     $result = $stmt->get_result();
-
+    $i=0;
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $_SESSION["port"] = $row["cus_port"];
@@ -26,13 +26,14 @@ if (isset($_GET['user']) && isset($_GET['pass'])) {
                             );";
             $result = $conn->query($sql_equity);
             $temp = array();
-            $i = 0;
+            
             while ($row = $result->fetch_assoc()) {
                 $his_equity = $row['his_equity'];
                 $temp[$i] = $his_equity;
                 $i = $i + 1;
             }
-
+            if($i!=0)
+            {
             $_SESSION["equity0"] = $temp[0];
             $_SESSION["equity1"] = $temp[1];
 
@@ -51,6 +52,7 @@ if (isset($_GET['user']) && isset($_GET['pass'])) {
             $row = $result_balance->fetch_assoc();
             $balance = $row["his_balance"];
             $_SESSION["currentbalance"] = $balance;
+            }
         }
 
         header("Location: index.php");

@@ -63,13 +63,13 @@
             <div class="paybox">
                 <h1>Payment</h1>
                 <img src="./logo.png" style="height:70px; margin-bottom:10px">
-                <p>User port: <?php $_SESSION['port']?></p>
-                <p>Order quantity: <?php $_SESSION['count']?></p>
+                <p>User port: <?php echo $_SESSION['port']?></p>
+                <p>Order quantity: <?php echo $_SESSION['count']?></p>
                 <p>Equity growth: <?php echo number_format($_SESSION['equity1'] - $_SESSION['equity0'], 2) ?> $</p>
-                <p>Current balance: <?php $_SESSION['currentbalance']?> $</p>
-                <p>Current equity: <?php $_SESSION['equity1']?></p>
-                <p>Billing date: <?php date('Y-m-d')?></p>
-                <h3>Amount to be paid: <?php $formatted_number?> THB</h3>
+                <p>Current balance: <?php echo $_SESSION['currentbalance']?> $</p>
+                <p>Current equity: <?php echo $_SESSION['equity1']?></p>
+                <p>Billing date: <?php echo date('Y-m-d')?></p>
+                <h3>Amount to be paid: <?php echo $formatted_number?> THB</h3>
                 <img src="./pic/promtpay.jpg" style="height:250px;margin-top:-340px;margin-left:400px">
             <div>
 
