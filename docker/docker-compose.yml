@@ -1,8 +1,8 @@
 version: '3.3'
 
 services:
-  db:
-    container_name: dbreact
+  dbreact:
+    container_name: dbreactttt
     image: mysql
     restart: always
     environment:
@@ -11,26 +11,27 @@ services:
       MYSQL_USER: MYSQL_USER
       MYSQL_PASSWORD: MYSQL_PASSWORD
     ports:
-      - "9906:3306"
+      - "6606:6606"
+
   phpmyadmin:
     image: phpmyadmin
+    container_name: phpmyadmin
     ports:
-      - "8000:80"
+      - "8001:80" # เปลี่ยนพอร์ตจาก 8000 เป็น 8001
     restart: always
     environment:
-      PMA_HOST: db
+      PMA_HOST: dbreact
     depends_on:
-      - db
+      - dbreact
+
   php-apache-environment:
-    container_name: php-apache
-    build: 
-      context: ./fontend
+    container_name: php-apachettt
+    build:
+      context: ./php
       dockerfile: Dockerfile
     depends_on:
-      - db
+      - dbreact
     volumes:
       - ./php/src:/var/www/html/
     ports:
-      - 8080:80
-      
-    
+      - 8081:80 # เปลี่ยนพอร์ตจาก 8080 เป็น 8081
